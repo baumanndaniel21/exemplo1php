@@ -4,71 +4,70 @@
 
 <html>
 
-    <head>
+<head>
 
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-        <title>Boletim</title>
+    <title>Boletim</title>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <h1 style="color: #2a15cf">Boletim</h1>
+    <h1 style="color: #2a15cf">Boletim</h1>
 
-        <form method="get">
+    <form method="get">
 
-            <label>Informe a nota: </label>
+        <label>Informe a nota: </label>
 
-            <br/>
+        <br />
 
-            <input type="text" name="nota"/>
+        <input type="text" name="nota" />
 
-            <br/>
+        <br />
 
-            <label>Informe a frequência: </label>
+        <label>Informe a frequência: </label>
 
-            <br/>
+        <br />
 
-            <input type="text" name="freq"/>
+        <input type="text" name="freq" />
 
-            <br/>
+        <br />
 
-            <input type="submit" value="Resultado"/>
+        <input type="submit" value="Resultado" />
 
-        </form>
+    </form>
 
-        <?php
+    <?php
 
-        if ($_GET) {
+    if ($_GET) {
 
-            $media = $_GET['nota'];
+        $media = $_GET['nota'];
 
-            $freq = $_GET['freq'];
+        $freq = $_GET['freq'];
 
-            if ($media >= 7.0) {
+        if ($media >= 7.0) {
 
-                if ($freq >= 75.0) {
+            if ($freq >= 75.0) {
 
-                    echo("Aprovado");
-
-                } else {
-
-                    echo("Reprovado");
-
-                }//fim Se Freq
+                echo ("Aprovado");
 
             } else {
 
-                echo("Reprovado");
+                echo ("Reprovado");
 
-            }//Fim Se media  
+            } //fim Se Freq
+    
+        } else {
 
-        }
+            echo ("Reprovado");
 
-        ?>
+        } //Fim Se media  
+    
+    }
 
-    </body>
+    ?>
+
+</body>
 
 </html>
-
